@@ -1,2 +1,3 @@
 # Swift-Playground
-A reference code and lab exercise
+
+[Lecture 1](https://github.com/NightfuryEquinn/Swift-Playground/blob/main/main.swift)
