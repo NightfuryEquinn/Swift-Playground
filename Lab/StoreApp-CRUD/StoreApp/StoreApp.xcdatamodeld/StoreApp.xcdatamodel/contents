@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Image" representedClassName="Image" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Transformable"/>
+        <relationship name="toItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="toImage" inverseEntity="Item"/>
+        <relationship name="toStore" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Store" inverseName="toImage" inverseEntity="Store"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="details" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toItem" inverseEntity="Image"/>
+        <relationship name="toItemType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ItemType" inverseName="toItem" inverseEntity="ItemType"/>
+        <relationship name="toStore" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Store" inverseName="toItem" inverseEntity="Store"/>
+    </entity>
+    <entity name="ItemType" representedClassName="ItemType" syncable="YES" codeGenerationType="class">
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="toItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="toItemType" inverseEntity="Item"/>
+    </entity>
+    <entity name="Store" representedClassName="Store" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="toImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Image" inverseName="toStore" inverseEntity="Image"/>
+        <relationship name="toItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="toStore" inverseEntity="Item"/>
+    </entity>
+    <elements>
+        <element name="Image" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Item" positionX="-44" positionY="122.2109375" width="128" height="148"/>
+        <element name="ItemType" positionX="193.328125" positionY="10.765625" width="128" height="73"/>
+        <element name="Store" positionX="245.01171875" positionY="108.96875" width="128" height="88"/>
+    </elements>
+</model>
