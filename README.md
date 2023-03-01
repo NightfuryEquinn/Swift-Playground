@@ -11,3 +11,5 @@
 [FirebaseTestApp](https://github.com/NightfuryEquinn/Swift-Playground/tree/main/Lab/FireBase/FireBaseProject) - Taken from Yap Jiann Yang
 <br/>
 [CoreDataApp](https://github.com/NightfuryEquinn/Swift-Playground/tree/main/Lab/CoreDataSwift)
+<br/>
+[MyFirstMap](https://github.com/NightfuryEquinn/Swift-Playground/tree/main/Lab/MyFirstMap)
