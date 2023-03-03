@@ -13,6 +13,8 @@ struct MyMap: UIViewRepresentable {
     @Binding var currentRegion: MKCoordinateRegion
     @Binding var currentAnnotation: MKPointAnnotation?
     
+    @Binding var showPhotoGrid: Bool
+    
     // Create coordinator subclass of MyMap
     class Coordinator: NSObject, MKMapViewDelegate, CLLocationManagerDelegate {
         var map: MKMapView?
@@ -43,6 +45,11 @@ struct MyMap: UIViewRepresentable {
                 return
             }
         }
+        
+        // Toggle showPhotoGrid state
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            parent.showPhotoGrid = true
+        }
     }
     
     func makeUIView(context: Context) -> MKMapView {
@@ -57,6 +64,9 @@ struct MyMap: UIViewRepresentable {
         map.addGestureRecognizer(longPress)
         
         context.coordinator.map = map
+        
+        // Specified the coordinator to also be map's delegate
+        map.delegate = context.coordinator
     
         return map
     }

@@ -13,6 +13,12 @@
 		64306754299CA99900DAC3B8 /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64306753299CA99900DAC3B8 /* MyMapView.swift */; };
 		64306756299CA9DF00DAC3B8 /* MyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64306755299CA9DF00DAC3B8 /* MyMap.swift */; };
 		64306758299CB31200DAC3B8 /* MyMapLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64306757299CB31200DAC3B8 /* MyMapLocationManager.swift */; };
+		64865EF229B191B1006E3788 /* PhotoGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64865EF129B191B1006E3788 /* PhotoGrid.swift */; };
+		64865EF429B19772006E3788 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64865EF329B19772006E3788 /* APIHelper.swift */; };
+		64865EF729B1990D006E3788 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 64865EF629B1990D006E3788 /* Alamofire */; };
+		64865EF929B19930006E3788 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64865EF829B19930006E3788 /* DownloadManager.swift */; };
+		64865EFC29B1998E006E3788 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 64865EFB29B1998E006E3788 /* AlamofireImage */; };
+		64865EFE29B19A08006E3788 /* DownloadedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64865EFD29B19A08006E3788 /* DownloadedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,10 @@
 		64306753299CA99900DAC3B8 /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		64306755299CA9DF00DAC3B8 /* MyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMap.swift; sourceTree = "<group>"; };
 		64306757299CB31200DAC3B8 /* MyMapLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapLocationManager.swift; sourceTree = "<group>"; };
+		64865EF129B191B1006E3788 /* PhotoGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGrid.swift; sourceTree = "<group>"; };
+		64865EF329B19772006E3788 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		64865EF829B19930006E3788 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		64865EFD29B19A08006E3788 /* DownloadedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64865EF729B1990D006E3788 /* Alamofire in Frameworks */,
+				64865EFC29B1998E006E3788 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,9 +67,13 @@
 		6430673D299CA82C00DAC3B8 /* MyFirstMap */ = {
 			isa = PBXGroup;
 			children = (
+				64865EFD29B19A08006E3788 /* DownloadedImage.swift */,
 				6430673E299CA82C00DAC3B8 /* MyFirstMapApp.swift */,
 				64306753299CA99900DAC3B8 /* MyMapView.swift */,
 				64306755299CA9DF00DAC3B8 /* MyMap.swift */,
+				64865EF129B191B1006E3788 /* PhotoGrid.swift */,
+				64865EF329B19772006E3788 /* APIHelper.swift */,
+				64865EF829B19930006E3788 /* DownloadManager.swift */,
 				64306757299CB31200DAC3B8 /* MyMapLocationManager.swift */,
 				64306742299CA82E00DAC3B8 /* Assets.xcassets */,
 				64306744299CA82E00DAC3B8 /* Preview Content */,
@@ -89,6 +105,10 @@
 			dependencies = (
 			);
 			name = MyFirstMap;
+			packageProductDependencies = (
+				64865EF629B1990D006E3788 /* Alamofire */,
+				64865EFB29B1998E006E3788 /* AlamofireImage */,
+			);
 			productName = MyFirstMap;
 			productReference = 6430673B299CA82C00DAC3B8 /* MyFirstMap.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +137,10 @@
 				Base,
 			);
 			mainGroup = 64306732299CA82C00DAC3B8;
+			packageReferences = (
+				64865EF529B1990D006E3788 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				64865EFA29B1998E006E3788 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 6430673C299CA82C00DAC3B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,10 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64865EF429B19772006E3788 /* APIHelper.swift in Sources */,
 				64306754299CA99900DAC3B8 /* MyMapView.swift in Sources */,
 				64306758299CB31200DAC3B8 /* MyMapLocationManager.swift in Sources */,
 				6430673F299CA82C00DAC3B8 /* MyFirstMapApp.swift in Sources */,
+				64865EFE29B19A08006E3788 /* DownloadedImage.swift in Sources */,
+				64865EF229B191B1006E3788 /* PhotoGrid.swift in Sources */,
 				64306756299CA9DF00DAC3B8 /* MyMap.swift in Sources */,
+				64865EF929B19930006E3788 /* DownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +381,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64865EF529B1990D006E3788 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		64865EFA29B1998E006E3788 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64865EF629B1990D006E3788 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64865EF529B1990D006E3788 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		64865EFB29B1998E006E3788 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64865EFA29B1998E006E3788 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 64306733299CA82C00DAC3B8 /* Project object */;
 }
