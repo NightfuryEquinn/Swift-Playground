@@ -31,3 +31,7 @@ Using CoreLocation and MapKit to detect user's current location and display Flic
 8️⃣ [TabBarApp](https://github.com/NightfuryEquinn/Swift-Playground/tree/main/Lab/TabBarApp) - XCode v13.2.1
 <br/>
 Discovering tab bar.
+<br/><br/>
+9️⃣ [LocalisationApp](https://github.com/NightfuryEquinn/Swift-Playground/tree/main/Lab/LocalisationApp) - XCode v13.2.1
+<br/>
+Implementing multi-language in iOS application localisation
